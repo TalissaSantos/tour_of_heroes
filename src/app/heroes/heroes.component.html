@@ -11,17 +11,5 @@
       <span class="name">Nome: {{ hero.name }}</span>
     </button>
   </li>
-  <div *ngIf="heroSelected">
-    <h1 class="title">Detalhes do Herói</h1>
-    <h2>{{ heroSelected.name | uppercase }}</h2>
-    <div>id: {{ heroSelected.id }}</div>
-    <div>
-      <label for="hero-name">Hero name: </label>
-      <input
-        id="hero-name"
-        [(ngModel)]="heroSelected.name"
-        placeholder="name"
-      />
-    </div>
-  </div>
 </ul>
+<app-heroes-detail [hero]="heroSelected"></app-heroes-detail>
