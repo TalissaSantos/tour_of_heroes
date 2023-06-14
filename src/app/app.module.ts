@@ -7,9 +7,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroesComponent } from './heroes/heroes.component';
 import { FormsModule } from '@angular/forms';
 import { HeroesDetailComponent } from './heroes-detail/heroes-detail.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
-  declarations: [AppComponent, HeroesComponent, HeroesDetailComponent],
+  declarations: [AppComponent, HeroesComponent, HeroesDetailComponent, MessagesComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
