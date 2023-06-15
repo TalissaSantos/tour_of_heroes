@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 
-import { Hero } from './Interface/Hero';
+import { Hero } from '../heroes/Interface/Hero';
 import { HeroService } from '../services/hero.service';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class HeroesComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
-
   constructor(private heroService: HeroService, private location: Location) {}
 
   ngOnInit(): void {
@@ -19,9 +18,10 @@ export class HeroesComponent implements OnInit {
   }
 
   getHeroes() {
-    this.heroService.getHeroes().subscribe((heroes) => (this.heroes = heroes));
+    this.heroService.getHeroes().subscribe((hero) => {
+      this.heroes = hero;
+    });
   }
-
   goBack() {
     this.location.back();
   }

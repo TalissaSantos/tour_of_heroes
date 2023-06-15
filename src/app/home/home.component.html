@@ -1,0 +1,9 @@
+<nav *ngIf="!isListHeroes">
+  <h1 routerLink="/home" class="title">{{ title }}</h1>
+  <button type="button" routerLink="/dashboard" (click)="buttons()">
+    Clique aqui para acessar o Dashboard
+  </button>
+  <button type="button" routerLink="/heroes" (click)="buttons()">
+    Clique aqui para acessar a lista de heróis
+  </button>
+</nav>
