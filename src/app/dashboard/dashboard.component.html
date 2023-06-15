@@ -1,7 +1,0 @@
-<h1 class="title">Dashboard</h1>
-<div class="heroes-menu">
-  <a *ngFor="let hero of heroes" routerLink="/detail/{{ hero.id }}">{{
-    hero.name
-  }}</a>
-</div>
-<button (click)="goBack()">Voltar</button>
