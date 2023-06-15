@@ -1,4 +1,4 @@
-<div *ngIf="hero">
+<nav *ngIf="hero">
   <h1 class="title">Detalhes do Herói</h1>
   <h2>{{ hero.name | uppercase }}</h2>
   <div>ID: {{ hero.id }}</div>
@@ -10,4 +10,5 @@
       placeholder=" nome do herói "
     />
   </div>
-</div>
+  <button (click)="goBack()">Voltar</button>
+</nav>
